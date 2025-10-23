@@ -101,7 +101,7 @@ const DashboardSidebar = () => {
 
       <div className="flex mt-20 px-4  items-center font-bold">
         <span><MdLogout /></span>
-        <button>Log Out</button>
+        <button className="hidden md:flex">Log Out</button>
       </div>
     </aside>
   );

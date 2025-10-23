@@ -295,29 +295,41 @@ export default function OrgChartDirectory() {
             <div className="bg-white rounded-xl shadow-2xl border border-gray-100 p-6 space-y-6">
                 
                 {/* Top Nav/Actions (Mimicking image layout) */}
-                <div className="flex justify-between items-center pb-4 border-b border-gray-100">
-                    <div className="flex space-x-4 text-sm font-medium text-gray-600 border-b-2 border-transparent">
-                        <button className="text-indigo-600 border-b-2 border-indigo-600 pb-2 flex items-center">
-                            <svg className="w-5 h-5 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"></path><path d="M18 17h-5"></path><path d="M15 13h-2"></path><path d="M15 9h-4"></path></svg>
-                            ORG Chart
-                        </button>
-                        <button className="hover:text-indigo-600 pb-2">Profile</button>
-                        <button className="hover:text-indigo-600 pb-2">Attendance</button>
-                        <button className="hover:text-indigo-600 pb-2">Time Tracking</button>
-                        <button className="hover:text-indigo-600 pb-2">Leave Management</button>
-                        {/* ... other nav items */}
-                    </div>
-                    
-                    <div className="flex space-x-3 items-center">
-                        <button 
-                            className="px-4 py-2 bg-indigo-700 text-white font-semibold rounded-xl shadow-md hover:bg-indigo-600 transition flex items-center text-sm"
-                            onClick={() => setIsModalOpen(true)}
-                        >
-                             <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                            Create New Account
-                        </button>
-                    </div>
-                </div>
+                <div className="flex flex-col md:flex-row justify-between items-center pb-4 border-b border-gray-100">
+  
+  {/* Navigation Tabs */}
+  <div className="flex overflow-x-auto md:overflow-x-visible space-x-4 text-sm font-medium text-gray-600 border-b-2 border-transparent">
+    <button className="flex items-center text-indigo-600 border-b-2 border-indigo-600 pb-2 flex-shrink-0">
+      <svg className="w-5 h-5 mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 3v18h18"></path>
+        <path d="M18 17h-5"></path>
+        <path d="M15 13h-2"></path>
+        <path d="M15 9h-4"></path>
+      </svg>
+      ORG Chart
+    </button>
+    <button className="flex-shrink-0 hover:text-indigo-600 pb-2">Profile</button>
+    <button className="flex-shrink-0 hover:text-indigo-600 pb-2">Attendance</button>
+    <button className="flex-shrink-0 hover:text-indigo-600 pb-2">Time Tracking</button>
+    <button className="flex-shrink-0 hover:text-indigo-600 pb-2">Leave Management</button>
+    {/* Add more nav items if needed */}
+  </div>
+
+  {/* Action Button */}
+  <div className="mt-3 md:mt-0 flex space-x-3 items-center">
+    <button 
+      className="px-4 py-2 bg-indigo-700 text-white font-semibold rounded-xl shadow-md hover:bg-indigo-600 transition flex items-center text-sm whitespace-nowrap"
+      onClick={() => setIsModalOpen(true)}
+    >
+      <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+      </svg>
+      Create New Account
+    </button>
+  </div>
+</div>
+
 
 
                 {/* Search Bar & Edit Button */}
