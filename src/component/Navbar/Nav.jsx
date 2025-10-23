@@ -1,5 +1,5 @@
 import React from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowRight, MdLogout } from "react-icons/md";
 import { NavLink } from "react-router";
 
 // Helper function to create inline SVG icons dynamically
@@ -98,6 +98,11 @@ const DashboardSidebar = () => {
           <NavItem key={item.pathName} item={item} />
         ))}
       </nav>
+
+      <div className="flex mt-20 px-4  items-center font-bold">
+        <span><MdLogout /></span>
+        <button>Log Out</button>
+      </div>
     </aside>
   );
 };
